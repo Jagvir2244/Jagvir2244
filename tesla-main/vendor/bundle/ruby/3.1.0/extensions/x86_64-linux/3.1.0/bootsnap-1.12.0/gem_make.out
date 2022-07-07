@@ -1,0 +1,15 @@
+current directory: /home/satish-sehgal/tesla/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.12.0/ext/bootsnap
+/home/satish-sehgal/.rvm/rubies/ruby-3.1.0/bin/ruby -I /home/satish-sehgal/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0 -r ./siteconf20220629-7325-ud334p.rb extconf.rb
+creating Makefile
+
+current directory: /home/satish-sehgal/tesla/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.12.0/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /home/satish-sehgal/tesla/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.12.0/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/satish-sehgal/tesla/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.12.0/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20220629-7325-ih0kah/bootsnap

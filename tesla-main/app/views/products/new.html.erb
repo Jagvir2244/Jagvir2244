@@ -1,0 +1,53 @@
+<%=render "home/header3"%>
+<section class="flex-shrink-0">
+  <div class="container-fluid">
+    <div class="container pt-4 pb-7 ">
+      <div class="row justify-content-center">
+        <div class="col-9 col-xs-9 col-sm-9 col-md-8 col-lg-6 col-xl-4 col-xxl-4 ">
+          <div class="row">
+            <div class="col-12 position-relative  ">
+              <h1 class="col-dark-blue f-m-1 ">
+                <div class="back-arrow">
+                  <a href="/products">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="34" viewBox="0 0 19 34" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9003 0.838747C18.5186 1.45708 18.5186 2.45959 17.9003 3.07792L3.97826 17L17.9003 30.9221C18.5186 31.5404 18.5186 32.5429 17.9003 33.1612C17.282 33.7795 16.2795 33.7795 15.6612 33.1612L0.619509 18.1196C0.00117923 17.5013 0.00117923 16.4987 0.619509 15.8804L15.6612 0.838747C16.2795 0.220418 17.282 0.220418 17.9003 0.838747Z" fill="#1D3038"/>
+                    </svg>
+                  </a>
+                </div>
+                create new
+              </h1>
+              <%= form_with model:@product do |f|%>
+              <div class="form">
+                <div>
+                  <%=f.label :name, class:"f-l-4-regular  m-0 text-black pt-2 pb-2"  %><br>
+                  <%=f.text_field :name, class:"form-control-box f-l-primary-regular mb-3", required: "required"%> 
+                </div>
+                <div>
+                  <%=f.label :color, class:"f-l-4-regular  m-0 text-black pt-2 pb-2"  %><br>
+                  <%=f.text_field :color, class:"form-control-box f-l-primary-regular mb-3", required: "required" %> 
+                </div>
+                <div>
+                  <%=f.label :price, class:"f-l-4-regular  m-0 text-black pt-2 pb-2" %><br>
+                  <%=f.text_field :price, class:"form-control-box f-l-primary-regular mb-3" %> 
+                </div>
+                <div>
+                  <div class="d-grid gap-2">
+                    <%=f.submit "Create New Product", class:"btn btn-primary-flux  sh-filter-button f-l-button-bold sh-filter-button   " %>
+                  </div>
+                </div>
+                 <% if flash[:error].present? %>
+          <h5 class="text-center error-message"><%= flash[:error] %></h5>
+          <%end%>
+          <% if flash[:success].present? %>
+          <h5 class="text-center success-message"><%= flash[:success] %></h5>
+          <%end%>
+              </div>
+              <%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%= render 'home/footer' %>

@@ -1,0 +1,38 @@
+<%=render "home/header3"%>
+<section class="flex-shrink-0">
+  <div class="container-fluid">
+    <div class="container pt-4 pb-7 ">
+      <div class="row justify-content-center">
+        <div class="col-9 col-xs-9 col-sm-9 col-md-8 col-lg-6 col-xl-4 col-xxl-4 ">
+          <div class="row">
+            <div class="col-12 position-relative  ">
+              <h1 class="col-dark-blue f-m-1 ">  Edit Product</h1>
+              <%= form_with model:@product do |f|%>
+              <div class="form">
+                <div>
+                  <%=f.label :name, class:"f-l-4-regular  m-0 text-black pt-2 pb-2"  %><br>
+                  <%=f.text_field :name, class:"form-control-box f-l-primary-regular mb-3", required: "required"%> 
+                </div>
+                <div>
+                  <%=f.label :color, class:"f-l-4-regular  m-0 text-black pt-2 pb-2"  %><br>
+                  <%=f.text_field :color, class:"form-control-box f-l-primary-regular mb-3", required: "required" %> 
+                </div>
+                <div>
+                  <%=f.label :price, class:"f-l-4-regular  m-0 text-black pt-2 pb-2" %><br>
+                  <%=f.text_field :price, class:"form-control-box f-l-primary-regular mb-3" %> 
+                </div>
+                <div>
+                  <div class="d-grid gap-2">
+                    <%=f.submit "Edit Product", class:"btn btn-primary-flux  sh-filter-button f-l-button-bold sh-filter-button   " %>
+                  </div>
+                </div>
+              </div>
+              <%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%= render 'home/footer' %>

@@ -1,0 +1,16 @@
+current directory: /home/satish-sehgal/tesla/vendor/bundle/ruby/3.1.0/gems/strscan-3.0.3/ext/strscan
+/home/satish-sehgal/.rvm/rubies/ruby-3.1.0/bin/ruby -I /home/satish-sehgal/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0 -r ./siteconf20220629-7325-l424zq.rb extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+creating Makefile
+
+current directory: /home/satish-sehgal/tesla/vendor/bundle/ruby/3.1.0/gems/strscan-3.0.3/ext/strscan
+make DESTDIR\= clean
+
+current directory: /home/satish-sehgal/tesla/vendor/bundle/ruby/3.1.0/gems/strscan-3.0.3/ext/strscan
+make DESTDIR\=
+compiling strscan.c
+linking shared-object strscan.so
+
+current directory: /home/satish-sehgal/tesla/vendor/bundle/ruby/3.1.0/gems/strscan-3.0.3/ext/strscan
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 strscan.so ./.gem.20220629-7325-vtzh2k
