@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   # get "auth/google_oauth2/callback"
   resource :users
   resources :products
-  get 'auth/google_oauth2/callback'
+  # get 'auth/google_oauth2/callback'
 # devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
 end

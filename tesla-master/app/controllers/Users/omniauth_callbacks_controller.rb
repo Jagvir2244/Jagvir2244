@@ -8,9 +8,19 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         sign_in_and_redirect @user, event: :authentication
       else
         session['devise.google_data'] = request.env['omniauth.auth'].except('extra') # Removing extra as it can overflow some session stores
-        redirect_to http://localhost:3000/auth/google_oauth2/callback, alert: @user.errors.full_messages.join("\n")
+        redirect_to http://localhost:3000/users/auth/google_oauth2/callback, alert: @user.errors.full_messages.join("\n")
       end
-  end
-  def google_oauth2
-  end
+      def self.from_omniauth(access_token)
+    data = access_token.info
+    user = User.where(email: data['email']).first
+
+    Uncomment the section below if you want users to be created if they don't exist
+    unless user
+        user = User.create(name: data['name'],
+           email: data['email'],
+           password: Devise.friendly_token[0,20]
+        )
+    end
+    user
+end
 end
